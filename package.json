@@ -1,0 +1,35 @@
+{
+  "name": "nodeapimongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:build": "webpack -w",
+    "dev": "cross-env NODE_ENV=development nodemon dist/index.bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superstarlks/nodeapimongodb.git"
+  },
+  "author": "hungle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/superstarlks/nodeapimongodb/issues"
+  },
+  "homepage": "https://github.com/superstarlks/nodeapimongodb#readme",
+  "dependencies": {
+    "cross-env": "^5.1.1",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.13.1",
+    "eslint-config-equimper": "^2.2.1",
+    "nodemon": "^1.12.7",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
