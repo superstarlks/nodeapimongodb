@@ -341,6 +341,10 @@ var _helmet = __webpack_require__(11);
 
 var _helmet2 = _interopRequireDefault(_helmet);
 
+var _passport = __webpack_require__(16);
+
+var _passport2 = _interopRequireDefault(_passport);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -353,6 +357,7 @@ exports.default = app => {
   }
   app.use(_bodyParser2.default.json());
   app.use(_bodyParser2.default.urlencoded({ extended: true }));
+  app.use(_passport2.default.initialize());
 
   if (isDev) {
     app.use((0, _morgan2.default)('dev'));
