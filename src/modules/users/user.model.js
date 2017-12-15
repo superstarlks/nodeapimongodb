@@ -18,17 +18,18 @@ const UserSchema = new Schema({
   firstName: {
     type: String,
     required: [true, 'FirstName is required!'],
-    trime: true,
+    trim: true,
   },
   lastName: {
     type: String,
     required: [true, 'LastName is required!'],
-    trime: true,
+    trim: true,
   },
   userName: {
     type: String,
     required: [true, 'UserName is required!'],
-    trime: true,
+    trim: true,
+    unique: true,
   },
   password: {
     type: String,
