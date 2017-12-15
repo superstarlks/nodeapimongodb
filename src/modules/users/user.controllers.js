@@ -12,7 +12,7 @@ export async function signUp(req, res) {
 }
 
 export function login(req, res, next) {
-  res.status(200).json(req.user);
+  res.status(HTTPStatus.OK).json(req.user.toAuthJSON());
 
   return next();
 }
