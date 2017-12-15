@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:build": "webpack -w",
+    "clean": "rimraf dist",
+    "dev:build": "yarn run clean && webpack -w",
     "dev": "cross-env NODE_ENV=development nodemon dist/index.bundle.js"
   },
   "repository": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/superstarlks/nodeapimongodb#readme",
   "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.18.2",
     "compression": "^1.7.1",
     "cross-env": "^5.1.1",
@@ -27,7 +29,9 @@
     "helmet": "^3.9.0",
     "http-status": "^1.0.1",
     "joi": "^13.0.2",
-    "mongoose": "^4.13.7"
+    "mongoose": "^4.13.7",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

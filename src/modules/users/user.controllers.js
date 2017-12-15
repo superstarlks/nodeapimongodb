@@ -10,3 +10,9 @@ export async function signUp(req, res) {
     return res.status(HTTPStatus.BAD_REQUEST).json(e);
   }
 }
+
+export function login(req, res, next) {
+  res.status(200).json(req.user);
+
+  return next();
+}
